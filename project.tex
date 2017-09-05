@@ -1,0 +1,68 @@
+\documentclass{exam}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+} 
+\usepackage{comment}
+
+ 
+\begin{document}
+
+\begin{center}
+\fbox{\fbox{\parbox{5.5in}{\centering
+\large\textbf{Pseudo-cores}}}}
+\end{center}
+ 
+\vspace{5mm}
+ 
+%\makebox[\textwidth]{Name and section:\enspace\hrulefill}
+ 
+%\makebox[\textwidth]{\textbf{Network Science CSL709}}
+%
+%\vspace{5mm}
+% 
+%\makebox[\textwidth]{\textbf{Multiple Choice Questions}}
+%
+%\textbf{ \\
+%One mark questions are from 1-4\\
+%Two Marks Questions are from 5-7\\
+%Five marks questions are from 8-10}
+
+\section{Introduction}
+
+We have an algorithm where we decompose a network into multiple shells using k-shell decomposition algorithm. Then we take a walk on this network. We start from a node and then look at its neighbours and move to the neighbour having the maximum coreness value. The question we are asking is regarding the number of steps this algorithm will take to terminate. 
+
+\section{Progress}
+If a node has a coreness $i$, then it should have at least $i$ neighbours having a coreness of $i$. If we could show that a node is almost always connected to a node having higher coreness, our work is done. This we need to do for the shells outside core, because for the core nodes, they have no other node having a high coreness. \\
+
+We can try to see how much time does it take for a node to leave its current shell and enter an inner shell. 
+
+
+
+
+
+
+\end{document}
