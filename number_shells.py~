@@ -1,0 +1,13 @@
+import networkx as nx 
+name='num_shells'+str(0.1)
+f = open(name,'w')
+for i in range (10,1000):
+	G=nx.erdos_renyi_graph(i,0.1)
+	c=nx.core_number(G)
+	s=[]
+	for each in c:
+		s.append(c[each])
+
+	print i
+	f.write(str(max(s))+'\n')
+	
